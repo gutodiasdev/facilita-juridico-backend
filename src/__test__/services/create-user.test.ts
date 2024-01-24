@@ -1,10 +1,6 @@
 import { IsEmailAlreadyRegisteredRepository } from "../../data/contracts";
 import { CreateUser } from "../../domain/features";
-
-export function validateEmail(email: string) {
-  const pattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-  return email.match(pattern);
-}
+import { validateEmail } from "../../domain/utils";
 
 export class CreateUserService implements CreateUser {
   constructor(readonly database: IsEmailAlreadyRegisteredRepository) {}
