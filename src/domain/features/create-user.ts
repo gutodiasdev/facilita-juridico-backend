@@ -1,3 +1,5 @@
+import { User } from "../@types";
+
 export interface CreateUser {
   execute(input: CreateUser.Input): Promise<CreateUser.Output>
 };
@@ -8,5 +10,5 @@ export namespace CreateUser {
     email: string;
     phone: string;
   }
-  export type Output = void | Error
+  export type Output = User
 };

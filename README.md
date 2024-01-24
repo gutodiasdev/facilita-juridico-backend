@@ -20,8 +20,8 @@ A empresa utiliza as seguintes informações para gerenciar seus clientes: nome,
 telefone.
 
 Na plataforma criada deve ser possível:
-● Listar os seus clientes e filtrar com base nas informações cadastradas
 ● Cadastrar clientes novos
+● Listar os seus clientes e filtrar com base nas informações cadastradas
 
 ## Parte 2
 
