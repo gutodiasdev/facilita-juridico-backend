@@ -6,7 +6,7 @@ export default class ListUsersService implements ListUsers {
 
   async execute(input: ListUsers.Input): Promise<ListUsers.Output> {
     if (input.term !== "") {
-      const result = await this.listUserRepository.list(input);
+      const result = await this.listUserRepository.list();
       const output = result.filter(user => {
         return Object.values(user).some(value => {
           return value.toLocaleLowerCase().includes(input.term!.toLowerCase())
@@ -14,7 +14,7 @@ export default class ListUsersService implements ListUsers {
       })
       return output
     }
-    const output = await this.listUserRepository.list(input);
+    const output = await this.listUserRepository.list();
     return output
   }
 }

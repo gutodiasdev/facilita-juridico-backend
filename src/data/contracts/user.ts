@@ -24,12 +24,9 @@ export namespace SaveUserRepository {
 };
 
 export interface ListUsersRepository {
-  list(input: ListUsersRepository.Input): Promise<ListUsersRepository.Output>
+  list(): Promise<ListUsersRepository.Output>
 };
 
 export namespace ListUsersRepository {
-  export type Input = {
-    term?: string;
-  }
   export type Output = User[]
 };
