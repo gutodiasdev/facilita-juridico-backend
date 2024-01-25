@@ -1,0 +1,16 @@
+version: '3.1'
+
+services:
+  db:
+    image: postgres
+    container_name: facilita-juridico
+    environment:
+      - POSTGRES_USER=facilita
+      - POSTGRES_PASSWORD=facilita
+      - POSTGRES_DB=default
+    ports:
+      - '5432:5432'
+
+networks:
+  default:
+    driver: bridge
