@@ -30,3 +30,12 @@ export interface ListUsersRepository {
 export namespace ListUsersRepository {
   export type Output = User[]
 };
+
+export interface DeleteUserRepository {
+  delete(input: DeleteUserRepository.Input): Promise<DeleteUserRepository.Output>
+};
+
+export namespace DeleteUserRepository {
+  export type Input = { id: string; };
+  export type Output = void;
+};
