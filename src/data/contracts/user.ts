@@ -1,3 +1,5 @@
+import { User } from "../../domain/@types"
+
 export interface IsEmailAlreadyRegisteredRepository {
   isEmailAlreadyRegistered(email: IsEmailAlreadyRegisteredRepository.Input): Promise<IsEmailAlreadyRegisteredRepository.Output>
 };
@@ -9,7 +11,7 @@ export namespace IsEmailAlreadyRegisteredRepository {
 
 export interface SaveUserRepository {
   save(input: SaveUserRepository.Input): Promise<SaveUserRepository.Output>
-}
+};
 
 export namespace SaveUserRepository {
   export type Input = {
@@ -19,4 +21,15 @@ export namespace SaveUserRepository {
     phone: string;
   }
   export type Output = void
-}
+};
+
+export interface ListUsersRepository {
+  list(input: ListUsersRepository.Input): Promise<ListUsersRepository.Output>
+};
+
+export namespace ListUsersRepository {
+  export type Input = {
+    term?: string;
+  }
+  export type Output = User[]
+};
