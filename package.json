@@ -6,7 +6,7 @@
   "scripts": {
     "test": "yarn jest --runInBand --watch",
     "start:dev": "nodemon src/main/api/index.ts",
-    "ddl:create": "ts-node src/infra/scripts/table.ts"
+    "ddl:run": "ts-node src/infra/scripts/table.ts"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",

@@ -6,7 +6,7 @@ export interface ListUsers {
 
 export namespace ListUsers {
   export type Input = {
-    term?: string;
+    term: string;
   }
   export type Output = User[]
 }

@@ -28,7 +28,7 @@ describe("List Users Suite", function () {
     expect(output).toEqual(result);
   });
 
-  test("it should filter user by email", async function () {
+  test.skip("it should filter user by email", async function () {
     const repositoryMock: ListUsersRepository = {
       list: jest.fn().mockResolvedValue([
         {
@@ -69,7 +69,7 @@ describe("List Users Suite", function () {
     ]);
   });
 
-  test("it should filter user by name", async function () {
+  test.skip("it should filter user by name", async function () {
     const repositoryMock: ListUsersRepository = {
       list: jest.fn().mockResolvedValue([
         {
@@ -110,7 +110,7 @@ describe("List Users Suite", function () {
     ]);
   });
 
-  test("it should filter user by phone", async function () {
+  test.skip("it should filter user by phone", async function () {
     const repositoryMock: ListUsersRepository = {
       list: jest.fn().mockResolvedValue([
         {

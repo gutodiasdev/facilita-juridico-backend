@@ -19,6 +19,8 @@ export namespace SaveUserRepository {
     name: string;
     email: string;
     phone: string;
+    x_axis: string;
+    y_axis: string;
   }
   export type Output = void
 };

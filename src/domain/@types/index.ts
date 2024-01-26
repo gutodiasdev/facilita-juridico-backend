@@ -3,4 +3,6 @@ export type User = {
   name: string;
   email: string;
   phone: string;
+  x_axis: string;
+  y_axis: string;
 }
